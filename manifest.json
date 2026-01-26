@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Smartschool Notities",
+  "version": "6.7",
+  "description": "Smartschool Notes by Shuto",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.smartschool.be/*"],
+      "js": [
+        "smppdetect.js",
+        "content.js"
+      ],
+      "css": [
+        "style.css"
+      ]
+    }
+  ]
+}

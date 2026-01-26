@@ -1,0 +1,129 @@
+/* KNOP */
+.ss-notes-btn {
+  background:#111827;
+  color:white;
+  border-radius:6px;
+}
+
+/* PANEL */
+#ss-notes-panel {
+  position:fixed;
+  top:60px;
+  right:0;
+  width:480px;
+  height:calc(100vh - 60px);
+  background:#0f172a;
+  color:white;
+  transform:translateX(100%);
+  transition:.3s ease;
+  display:flex;
+  flex-direction:column;
+  z-index:9999;
+}
+
+#ss-notes-panel.open {
+  transform:translateX(0);
+}
+
+/* HEADER */
+.notes-header {
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  background:#020617;
+}
+
+.notes-header button {
+  background:#1e293b;
+  color:white;
+  border:none;
+  margin-left:5px;
+  cursor:pointer;
+}
+
+/* BODY */
+.notes-body {
+  flex:1;
+  display:flex;
+  height:100%;
+}
+
+/* SIDEBAR */
+.notes-sidebar {
+  width:160px;
+  background:#020617;
+  padding:10px;
+}
+
+#notesList {
+  list-style:none;
+  padding:0;
+  margin-top:10px;
+}
+
+/* EDITOR */
+.notes-editor {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  padding:10px;
+}
+
+/* TITEL */
+.editor-header {
+  display:flex;
+  gap:6px;
+}
+
+.editor-header input {
+  flex:1;
+  background:#020617;
+  color:white;
+  border:1px solid #1e293b;
+  padding:6px;
+}
+
+#deleteNote {
+  background:#7f1d1d;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+/* KLEUREN */
+.color-bar {
+  display:flex;
+  gap:6px;
+  margin:6px 0;
+}
+
+.color-bar span {
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+/* TEKSTVAK — HIER ZIT JE PROBLEEM */
+#noteContent {
+  flex:1;
+  resize:none;
+  background:#020617;
+  color:white;
+  border:1px solid #1e293b;
+  padding:10px;
+  min-height:0; /* ZEER BELANGRIJK */
+}
+
+/* TIMESTAMP */
+.timestamp {
+  font-size:12px;
+  opacity:.6;
+  margin-top:4px;
+}
+
+/* EXAMENMODUS */
+#ss-notes-panel.exam textarea {
+  font-size:22px;
+  line-height:1.6;
+}
